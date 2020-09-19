@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerticalImageLabelCellIdentifier" id="gTV-IL-0wX" customClass="VerticalImageLabelCell" customModule="Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="661" height="443"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="661" height="443"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrf-eI-4ky">
+                        <rect key="frame" x="0.0" y="0.0" width="661" height="443"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aC5-4E-IOD">
+                                <rect key="frame" x="308.5" y="11" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JKp-WM-2GR"/>
+                                    <constraint firstAttribute="width" secondItem="aC5-4E-IOD" secondAttribute="height" multiplier="1:1" id="izY-10-P9W"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gt-nQ-EeY">
+                                <rect key="frame" x="340.5" y="43" width="12" height="12"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="kWZ-4c-iR7"/>
+                                    <constraint firstAttribute="width" secondItem="0gt-nQ-EeY" secondAttribute="height" multiplier="1:1" id="uY8-lL-s1Q"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-jG-wmU">
+                                <rect key="frame" x="309.5" y="63" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0gt-nQ-EeY" firstAttribute="trailing" secondItem="aC5-4E-IOD" secondAttribute="trailing" id="5qX-n5-gSe"/>
+                            <constraint firstItem="aC5-4E-IOD" firstAttribute="top" secondItem="nrf-eI-4ky" secondAttribute="top" constant="11" id="LAE-9b-dT8"/>
+                            <constraint firstItem="0gt-nQ-EeY" firstAttribute="bottom" secondItem="aC5-4E-IOD" secondAttribute="bottom" id="M7R-7K-2eL"/>
+                            <constraint firstItem="dfS-jG-wmU" firstAttribute="centerX" secondItem="nrf-eI-4ky" secondAttribute="centerX" id="mEL-H0-0sv"/>
+                            <constraint firstItem="dfS-jG-wmU" firstAttribute="top" secondItem="aC5-4E-IOD" secondAttribute="bottom" constant="8" id="pxh-eL-sVm"/>
+                            <constraint firstItem="aC5-4E-IOD" firstAttribute="centerX" secondItem="nrf-eI-4ky" secondAttribute="centerX" id="wMN-6Z-vfv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nrf-eI-4ky" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Wi-b0-0Dg"/>
+                <constraint firstItem="nrf-eI-4ky" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DWy-5x-nB7"/>
+                <constraint firstAttribute="bottom" secondItem="nrf-eI-4ky" secondAttribute="bottom" id="HXE-i6-Wrl"/>
+                <constraint firstAttribute="trailing" secondItem="nrf-eI-4ky" secondAttribute="trailing" id="bXk-LI-0cj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="661" height="443"/>
+            <connections>
+                <outlet property="dataContentView" destination="nrf-eI-4ky" id="oAP-6z-TZB"/>
+                <outlet property="profileImage" destination="aC5-4E-IOD" id="boE-bt-0Mu"/>
+                <outlet property="profileLabel" destination="dfS-jG-wmU" id="Zlg-2l-xjS"/>
+                <outlet property="statusView" destination="0gt-nQ-EeY" id="1pX-co-AoP"/>
+            </connections>
+            <point key="canvasLocation" x="51.449275362318843" y="142.29910714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
