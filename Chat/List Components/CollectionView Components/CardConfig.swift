@@ -20,13 +20,10 @@ enum CardType: String {
     case languageCard = "languageCard"
     case interestCard = "RoundedLabel"
     case discoverCard = "discoverCard"
-    case songCard = "songCard"
-    case albumCard = "albumCard"
-    case movieCard = "movieCard"
-    case artistCard = "artistCard"
-    case profileCard = "profileCard"
     case chatProfile = "chatProfile"
     case chatMessages = "chatMessages"
+    case sendingMessage = "sendingMessage"
+    case receivedMessage = "receivedMessage"
     
     func config() -> CardConfig {
         switch self {
@@ -38,20 +35,14 @@ enum CardType: String {
             return CardConfig(nibName: "ImageCollectionViewCell", bundle: Bundle.main, reuseIdentifier: "ImageCollectionViewCellIdentifier")
         case .discoverCard:
             return CardConfig(nibName: "DiscoverCollectionViewCell", bundle: Bundle.main, reuseIdentifier: "DiscoverCollectionViewCellIdentifier")
-        case .songCard:
-            return CardConfig(nibName: "SongTableViewCell", bundle: Bundle.main, reuseIdentifier: "SongTableViewCellIdentifier")
-        case .albumCard:
-            return CardConfig(nibName: "AlbumImageCell", bundle: Bundle.main, reuseIdentifier: "AlbumImageCellIdentifier")
-        case .movieCard:
-            return CardConfig(nibName: "MoviesListCell", bundle: Bundle.main, reuseIdentifier: "MoviesListCellIdentifier")
-        case .artistCard:
-            return CardConfig(nibName: "ArtistCell", bundle: Bundle.main, reuseIdentifier: "ArtistCellIdentifier")
-        case .profileCard:
-            return CardConfig(nibName: "ProfileCell", bundle: Bundle.main, reuseIdentifier: "ProfileCellIdentifier")
         case .chatProfile:
             return CardConfig(nibName: "VerticalImageLabelCell", bundle: Bundle.main, reuseIdentifier: "VerticalImageLabelCellIdentifier")
         case .chatMessages:
             return CardConfig(nibName: "ImageHorizontalLabelsCell", bundle: Bundle.main, reuseIdentifier: "ImageHorizontalLabelsCellIdentifier")
+        case .sendingMessage:
+            return CardConfig(nibName: "SenderCell", bundle: Bundle.main, reuseIdentifier: "SenderCellIdentifier")
+        case .receivedMessage:
+            return CardConfig(nibName: "ReceiverCell", bundle: Bundle.main, reuseIdentifier: "ReceiverCellIdentifier")
         }
     }
 }

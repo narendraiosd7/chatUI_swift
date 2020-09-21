@@ -79,7 +79,7 @@ class BaseNavigationController: UINavigationController {
             let controller = Controller.interest.getViewController()
             viewControllers = [controller]
         } else {
-            let controller = Controller.chat.getViewController()
+            let controller = Controller.chatDetails.getViewController()
             viewControllers = [controller]
         }
     }

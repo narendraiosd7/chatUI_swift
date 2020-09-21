@@ -58,8 +58,16 @@
 		DD3FA3E02514CA6600FF5FDF /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA3462514CA6600FF5FDF /* Avenir-Heavy.ttf */; };
 		DD3FA3E62514CA6600FF5FDF /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA34C2514CA6600FF5FDF /* Avenir-Medium.ttf */; };
 		DD3FA3E72514CA6600FF5FDF /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */; };
-		DD3FA3EB2514DD9600FF5FDF /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA3EA2514DD9600FF5FDF /* Chat.storyboard */; };
+		DD3FA3EB2514DD9600FF5FDF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA3EA2514DD9600FF5FDF /* Home.storyboard */; };
 		DD3FA3EE2515BB3400FF5FDF /* XMPPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */; };
+		DDA97C092518921A00073E33 /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C072518921A00073E33 /* SenderCell.swift */; };
+		DDA97C0A2518921A00073E33 /* SenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA97C082518921A00073E33 /* SenderCell.xib */; };
+		DDA97C0D2518923B00073E33 /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C0B2518923B00073E33 /* ReceiverCell.swift */; };
+		DDA97C0E2518923B00073E33 /* ReceiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA97C0C2518923B00073E33 /* ReceiverCell.xib */; };
+		DDA97C102518C49A00073E33 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C0F2518C49A00073E33 /* ChatDetailView.swift */; };
+		DDA97C122518C5B600073E33 /* ChatDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C112518C5B600073E33 /* ChatDetailsController.swift */; };
+		DDA97C142518C60D00073E33 /* ChatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C132518C60D00073E33 /* ChatDetailViewModel.swift */; };
+		DDA97C162518C62C00073E33 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C152518C62C00073E33 /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,8 +125,16 @@
 		DD3FA3462514CA6600FF5FDF /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
 		DD3FA34C2514CA6600FF5FDF /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
 		DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
-		DD3FA3EA2514DD9600FF5FDF /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		DD3FA3EA2514DD9600FF5FDF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPController.swift; sourceTree = "<group>"; };
+		DDA97C072518921A00073E33 /* SenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
+		DDA97C082518921A00073E33 /* SenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderCell.xib; sourceTree = "<group>"; };
+		DDA97C0B2518923B00073E33 /* ReceiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
+		DDA97C0C2518923B00073E33 /* ReceiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverCell.xib; sourceTree = "<group>"; };
+		DDA97C0F2518C49A00073E33 /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		DDA97C112518C5B600073E33 /* ChatDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailsController.swift; sourceTree = "<group>"; };
+		DDA97C132518C60D00073E33 /* ChatDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewModel.swift; sourceTree = "<group>"; };
+		DDA97C152518C62C00073E33 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		FDBE0DDD69E1E3236F3889CD /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,6 +215,7 @@
 			children = (
 				DD3FA3072514CA6500FF5FDF /* ChatView.swift */,
 				DD3FA3022514CA6500FF5FDF /* View Components */,
+				DDA97C0F2518C49A00073E33 /* ChatDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 				DD3FA2C82514CA6500FF5FDF /* LoaderViewController.swift */,
 				DD3FA27E2514C99B00FF5FDF /* ViewController.swift */,
 				DD3FA2BA2514CA6500FF5FDF /* ChatViewController.swift */,
+				DDA97C112518C5B600073E33 /* ChatDetailsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3FA29D2514CA6500FF5FDF /* ChatViewModel.swift */,
+				DDA97C132518C60D00073E33 /* ChatDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,6 +250,7 @@
 				DD3FA2F42514CA6500FF5FDF /* AppConfig.swift */,
 				DD3FA2EF2514CA6500FF5FDF /* Config.swift */,
 				DD3FA2EA2514CA6500FF5FDF /* ChatProfile.swift */,
+				DDA97C152518C62C00073E33 /* Messages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,7 +271,7 @@
 			children = (
 				DD3FA2C02514CA6500FF5FDF /* StoryBoard.swift */,
 				DD3FA2BF2514CA6500FF5FDF /* Main.storyboard */,
-				DD3FA3EA2514DD9600FF5FDF /* Chat.storyboard */,
+				DD3FA3EA2514DD9600FF5FDF /* Home.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -315,6 +335,7 @@
 		DD3FA30B2514CA6500FF5FDF /* TableView Components */ = {
 			isa = PBXGroup;
 			children = (
+				DDA97C062518908000073E33 /* MessageCells */,
 				DD3FA32D2514CA6600FF5FDF /* ImageHorizontalLabelsCell */,
 				DD3FA30C2514CA6500FF5FDF /* BaseTableViewCell.swift */,
 			);
@@ -397,6 +418,17 @@
 			path = XMPP;
 			sourceTree = "<group>";
 		};
+		DDA97C062518908000073E33 /* MessageCells */ = {
+			isa = PBXGroup;
+			children = (
+				DDA97C072518921A00073E33 /* SenderCell.swift */,
+				DDA97C082518921A00073E33 /* SenderCell.xib */,
+				DDA97C0B2518923B00073E33 /* ReceiverCell.swift */,
+				DDA97C0C2518923B00073E33 /* ReceiverCell.xib */,
+			);
+			path = MessageCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -461,14 +493,16 @@
 				DD3FA2872514C99D00FF5FDF /* LaunchScreen.storyboard in Resources */,
 				DD3FA2842514C99D00FF5FDF /* Assets.xcassets in Resources */,
 				DD3FA3E02514CA6600FF5FDF /* Avenir-Heavy.ttf in Resources */,
-				DD3FA3EB2514DD9600FF5FDF /* Chat.storyboard in Resources */,
+				DD3FA3EB2514DD9600FF5FDF /* Home.storyboard in Resources */,
 				DD3FA3E72514CA6600FF5FDF /* Avenir-Light.ttf in Resources */,
 				DD3FA3E62514CA6600FF5FDF /* Avenir-Medium.ttf in Resources */,
 				DD3FA3732514CA6600FF5FDF /* Main.storyboard in Resources */,
+				DDA97C0E2518923B00073E33 /* ReceiverCell.xib in Resources */,
 				DD3FA3B12514CA6600FF5FDF /* ErrorView.xib in Resources */,
 				DD3FA3D92514CA6600FF5FDF /* Avenir-Book.ttf in Resources */,
 				DD3FA3CA2514CA6600FF5FDF /* VerticalImageLabelCell.xib in Resources */,
 				DD3FA3D62514CA6600FF5FDF /* Avenir-Black.ttf in Resources */,
+				DDA97C0A2518921A00073E33 /* SenderCell.xib in Resources */,
 				DD3FA3CD2514CA6600FF5FDF /* ImageHorizontalLabelsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,8 +565,10 @@
 				DD3FA3B22514CA6600FF5FDF /* ErrorView.swift in Sources */,
 				DD3FA3D52514CA6600FF5FDF /* DocumentsAdapter.swift in Sources */,
 				DD3FA38C2514CA6600FF5FDF /* Formatters.swift in Sources */,
+				DDA97C102518C49A00073E33 /* ChatDetailView.swift in Sources */,
 				DD3FA3C02514CA6600FF5FDF /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DD3FA3D22514CA6600FF5FDF /* EventBaseViewController.swift in Sources */,
+				DDA97C122518C5B600073E33 /* ChatDetailsController.swift in Sources */,
 				DD3FA3B42514CA6600FF5FDF /* ChatView.swift in Sources */,
 				DD3FA3832514CA6600FF5FDF /* TransitionViewController.swift in Sources */,
 				DD3FA27B2514C99B00FF5FDF /* AppDelegate.swift in Sources */,
@@ -546,6 +582,7 @@
 				DD3FA3D02514CA6600FF5FDF /* CardConfig.swift in Sources */,
 				DD3FA27D2514C99B00FF5FDF /* SceneDelegate.swift in Sources */,
 				DD3FA36A2514CA6600FF5FDF /* NotificationCenterAdapter.swift in Sources */,
+				DDA97C0D2518923B00073E33 /* ReceiverCell.swift in Sources */,
 				DD3FA3562514CA6600FF5FDF /* ChatViewModel.swift in Sources */,
 				DD3FA39F2514CA6600FF5FDF /* Config.swift in Sources */,
 				DD3FA3522514CA6600FF5FDF /* BaseListView.swift in Sources */,
@@ -556,8 +593,11 @@
 				DD3FA38B2514CA6600FF5FDF /* Extension.swift in Sources */,
 				DD3FA3EE2515BB3400FF5FDF /* XMPPController.swift in Sources */,
 				DD3FA3D32514CA6600FF5FDF /* EventManger.swift in Sources */,
+				DDA97C162518C62C00073E33 /* Messages.swift in Sources */,
 				DD3FA3D12514CA6600FF5FDF /* VideoTracking.swift in Sources */,
 				DD3FA3A42514CA6600FF5FDF /* AppConfig.swift in Sources */,
+				DDA97C142518C60D00073E33 /* ChatDetailViewModel.swift in Sources */,
+				DDA97C092518921A00073E33 /* SenderCell.swift in Sources */,
 				DD3FA36E2514CA6600FF5FDF /* NoInternetViewController.swift in Sources */,
 				DD3FA39A2514CA6600FF5FDF /* ChatProfile.swift in Sources */,
 				DD3FA3892514CA6600FF5FDF /* UPCarouselFlowLayout.swift in Sources */,

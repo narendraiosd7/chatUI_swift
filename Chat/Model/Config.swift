@@ -244,6 +244,8 @@ class Font {
     
     let avenirRoman15 = UIFont.init(name: "Avenir-Roman", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .regular)
     
+    let avenirRoman13 = UIFont.init(name: "Avenir-Roman", size: 13) ?? UIFont.systemFont(ofSize: 13, weight: .regular)
+    
 }
 
 class Theme {
@@ -292,53 +294,19 @@ class Theme {
     var chatBackgroundColor = #colorLiteral(red: 0.8470588235, green: 0.1294117647, blue: 0.1647058824, alpha: 1) //rgba(216, 33, 42, 1)
     var chatBackgroundColor1 = #colorLiteral(red: 0, green: 0.6509803922, blue: 0.3176470588, alpha: 1) //rgba(0, 166, 81, 1)
     var chatBackgroundColor2 = #colorLiteral(red: 1, green: 0.4705882353, blue: 0, alpha: 1) //rgba(255, 120, 0, 1)
+    var chatBackgroundColor3 = #colorLiteral(red: 1, green: 0.7882352941, blue: 0.4705882353, alpha: 1) //rgba(255, 201, 120, 1)
+    var chatBackgroundColor4 = #colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9568627451, alpha: 1) //rgba(244, 244, 244, 1)
     
     var chatTextColor = #colorLiteral(red: 0.1568627451, green: 0.1843137255, blue: 0.2431372549, alpha: 1) //rgba(40, 47, 62, 1)
     var chatTextColor1 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) //rgba(255, 255, 255, 1)
     var chatTextColor2 = #colorLiteral(red: 0.1843137255, green: 0.1843137255, blue: 0.1843137255, alpha: 1) //rgba(47, 47, 47, 1)
     var chatTextColor3 = #colorLiteral(red: 0.5411764706, green: 0.568627451, blue: 0.6117647059, alpha: 1) //rgba(138, 145, 156, 1)
-    
+    var chatTextColor4 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //rgba(0, 0, 0, 1)
     
 }
 
 class ImageNames {
-    var noNetwork = "lightNoNetwork"
-    var searchGray = "searchGray"
-    var play = "play"
-    var back = "back"
-    var playIcon = "playAll"
-    var searchWhite = "searchWhite"
-    var heartGray = "heartGray"
-    var heartWhite = "heartWhite"
-    var burgerMenu = "burgerMenu"
-    var logout = "logout"
-    var playlist = "playlist"
-    var disk = "disk"
-    var micphone = "micphone"
-    var musicList = "musicList"
-    var more = "more"
-    var repeatTrack = "repeat"
-    var shuffle = "shuffle"
-    var previousTrack = "previousTrack"
-    var nextTrack = "nextTrack"
-    var heartSelected = "heartSelected"
-    var musicBar = "musicBar"
-    var next = "next"
-    var search = "search"
-    var heartUnselected = "heartUnselected"
-    var musicListUnselect = "musicListUnselect"
-    var musicListSelected = "musicListSelected"
-    var loginBackground = "loginBackground"
-    var zeeMusicLogo = "zeeMusicLogo"
-    var user = "user"
-    var google = "google"
-    var facebook = "facebook"
-    var warning = "warning"
-    var cross = "cross"
-    var hide = "hide"
-    
-    //chat images
-    
+    var noNetwork = "noNetwork"
     var chatExplore = "chatExplore"
     var chatMsgs =   "chatMsgs"
     var chat = "chat"
@@ -347,7 +315,12 @@ class ImageNames {
     var chatMute = "chatMute"
     var chatNews = "chatNews"
     var chatSearch = "chatSearch"
-    
+    var backArrow = "backArrow"
+    var more = "more"
+    var attachment = "attachment"
+    var camera = "camera"
+    var emoji = "emoji"
+    var microphone = "microphone"
 }
 
 class Translation: Codable {
