@@ -8,6 +8,6 @@ target 'Chat' do
   # Pods for Chat
   pod 'Alamofire'
   pod 'SDWebImage'
-  pod 'xmpp-messenger-ios'
+  pod 'XMPPFramework', :git => "https://github.com/robbiehanson/XMPPFramework.git", :branch => 'master'
 
 end

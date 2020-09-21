@@ -59,6 +59,7 @@
 		DD3FA3E62514CA6600FF5FDF /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA34C2514CA6600FF5FDF /* Avenir-Medium.ttf */; };
 		DD3FA3E72514CA6600FF5FDF /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */; };
 		DD3FA3EB2514DD9600FF5FDF /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA3EA2514DD9600FF5FDF /* Chat.storyboard */; };
+		DD3FA3EE2515BB3400FF5FDF /* XMPPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		DD3FA34C2514CA6600FF5FDF /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
 		DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
 		DD3FA3EA2514DD9600FF5FDF /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPController.swift; sourceTree = "<group>"; };
 		FDBE0DDD69E1E3236F3889CD /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 		DD3FA2792514C99B00FF5FDF /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				DD3FA3EC2515BAD500FF5FDF /* XMPP */,
 				DD3FA2922514C9F500FF5FDF /* ServiceLayer */,
 				DD3FA2912514C9E200FF5FDF /* Model */,
 				DD3FA2902514C9D300FF5FDF /* ViewModel */,
@@ -386,6 +389,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DD3FA3EC2515BAD500FF5FDF /* XMPP */ = {
+			isa = PBXGroup;
+			children = (
+				DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */,
+			);
+			path = XMPP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,6 +554,7 @@
 				DD3FA37C2514CA6600FF5FDF /* LoaderViewController.swift in Sources */,
 				DD3FA36B2514CA6600FF5FDF /* LocalNotificationAdapter.swift in Sources */,
 				DD3FA38B2514CA6600FF5FDF /* Extension.swift in Sources */,
+				DD3FA3EE2515BB3400FF5FDF /* XMPPController.swift in Sources */,
 				DD3FA3D32514CA6600FF5FDF /* EventManger.swift in Sources */,
 				DD3FA3D12514CA6600FF5FDF /* VideoTracking.swift in Sources */,
 				DD3FA3A42514CA6600FF5FDF /* AppConfig.swift in Sources */,
@@ -687,6 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Chat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,6 +718,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Chat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
