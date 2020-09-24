@@ -25,7 +25,7 @@ class XMPPController: NSObject {
         guard let userJID = XMPPJID(string: userJID ?? "") else {
             throw XMPPControllerError.wrongUserJID
         }
-       
+        
         self.hostName = hostName
         self.userJID = userJID
         self.hostPort = hostPort
@@ -52,9 +52,23 @@ class XMPPController: NSObject {
 }
 
 extension XMPPController: XMPPStreamDelegate {
+    
+    func xmppStreamWillConnect(sender: XMPPStream!) {
+        print("will connect")
+    }
+    
+    private func xmppStreamConnectDidTimeout(sender: XMPPStream!) {
+        print("timeout:")
+    }
+    
     func xmppStreamDidConnect(_ sender: XMPPStream) {
         print("Stream is connected")
-        try! xmppStream?.authenticate(withPassword: self.password ?? "")
+        do {
+           try xmppStream?.authenticate(withPassword: self.password ?? "")
+        } catch {
+            print("catch")
+        }
+        
     }
     
     func xmppStreamDidAuthenticate(_ sender: XMPPStream) {

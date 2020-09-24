@@ -47,7 +47,7 @@ class ChatViewModel: BaseViewModel {
     }
     
     func searchTapped() {
-        
+        delegate?.push(Controller.search.getViewController())
     }
     
     func zNotificationTapped() {
@@ -76,6 +76,10 @@ class ChatViewModel: BaseViewModel {
     
     func exploreTapped() {
         
+    }
+    
+    func selectedChatDetails(source: BaseTableViewCellDataSource?) {
+        delegate?.push(Controller.chatDetails.getViewController())
     }
 }
 

@@ -41,12 +41,11 @@ class StaticData {
     var forceUpdateMessage = "Please update to the latest version from AppStore."
     var update = "Update"
     var suggestedUpdateMessage = "Please update to the latest version to enjoy the latest feature."
-    var cancel = "Cancel"
+    
     var enterValidMobile = "Please enter a valid mobile number"
     var ok = "OK"
     var invalidOTP = "Please enter valid OTP"
     var somethingWentWrong = "Something went wrong. Please try again."
-    
     var finish = "Finish"
     var skip = "Skip"
     var languageTitle = "Select music languages"
@@ -83,6 +82,12 @@ class StaticData {
     var signin = "Signin"
     var emailID = "EMAIL ID"
     var password = "PASSWORD"
+    
+    //chat
+    
+    var mute = "Mute"
+    var block = "Block"
+    var cancel = "CANCEL"
     
     init() {
         if let data = DocumentsAdapter.getData(path: DocumentPath.translation.rawValue){
@@ -235,6 +240,7 @@ class Font {
     let avenirMedium2 = UIFont.init(name: "Avenir-Medium", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
     let avenirMedium3 = UIFont.init(name: "Avenir-Medium", size: 14) ?? UIFont.systemFont(ofSize: 14, weight: .medium)
     let avenirMedium4 = UIFont.init(name: "Avenir-Medium", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .medium)
+    let avenirMedium15 = UIFont.init(name: "Avenir-Medium", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .medium)
     
     let avenirRoman = UIFont.init(name: "Avenir-Roman", size: 24) ?? UIFont.systemFont(ofSize: 24, weight: .regular)
     let avenirRoman1 = UIFont.init(name: "Avenir-Roman", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .regular)
@@ -296,12 +302,15 @@ class Theme {
     var chatBackgroundColor2 = #colorLiteral(red: 1, green: 0.4705882353, blue: 0, alpha: 1) //rgba(255, 120, 0, 1)
     var chatBackgroundColor3 = #colorLiteral(red: 1, green: 0.7882352941, blue: 0.4705882353, alpha: 1) //rgba(255, 201, 120, 1)
     var chatBackgroundColor4 = #colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9568627451, alpha: 1) //rgba(244, 244, 244, 1)
+    var chatBackgroundColor5 = #colorLiteral(red: 0.7489469647, green: 0.7490623593, blue: 0.748929441, alpha: 0.5) //
     
     var chatTextColor = #colorLiteral(red: 0.1568627451, green: 0.1843137255, blue: 0.2431372549, alpha: 1) //rgba(40, 47, 62, 1)
     var chatTextColor1 = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) //rgba(255, 255, 255, 1)
     var chatTextColor2 = #colorLiteral(red: 0.1843137255, green: 0.1843137255, blue: 0.1843137255, alpha: 1) //rgba(47, 47, 47, 1)
     var chatTextColor3 = #colorLiteral(red: 0.5411764706, green: 0.568627451, blue: 0.6117647059, alpha: 1) //rgba(138, 145, 156, 1)
     var chatTextColor4 = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //rgba(0, 0, 0, 1)
+    var chatTextColor5 = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1) //rgba(112, 112, 112, 1)
+    var chatTextColor6 = #colorLiteral(red: 0.1176470588, green: 0.8156862745, blue: 0.6274509804, alpha: 1) //rgba(30, 208, 160, 1)
     
 }
 
@@ -321,6 +330,9 @@ class ImageNames {
     var camera = "camera"
     var emoji = "emoji"
     var microphone = "microphone"
+    var send = "send"
+    var cross = "cross"
+    
 }
 
 class Translation: Codable {

@@ -28,6 +28,10 @@ class ChatViewController: BaseViewController {
 }
 
 extension ChatViewController: ChatViewDelegate {
+    func selectedChatDetails(source: BaseTableViewCellDataSource?) {
+        viewModel.selectedChatDetails(source: source)
+    }
+    
     func searchTapped() {
         viewModel.searchTapped()
     }
@@ -68,6 +72,6 @@ extension ChatViewController: ChatViewModelDelegate {
     
     func updateUI() {
         chatView.dataSource = viewModel
-        chatView.updateUI()
+        chatView.reloadData()
     }
 }

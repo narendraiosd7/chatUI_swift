@@ -84,3 +84,24 @@ extension ChatData: ImageHorizontalLabelsCellDataSource {
         return onlineStatus ?? false
     }
 }
+
+class ChatCardSection {
+    var rows: [ChatData] =  [] {
+        didSet{
+            filterRows = rows
+        }
+    }
+    var filterRows: [ChatData] = []
+    
+    func updateFilterRows(text: String) {
+        if (text != "") {
+            filterRows = rows.filter { (data) -> Bool in
+                return (data.title).lowercased().contains(text.lowercased())
+            }
+        }
+        else {
+            filterRows = rows
+        }
+    }
+}
+

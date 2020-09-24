@@ -20,7 +20,7 @@ protocol ChatDetailViewDelegate: BaseListViewDelegate {
     func attachmentTapped()
     func emojiTapped()
     func cameraTapped()
-    func microphoneTapped()
+    func recordOrSendTapped()
 }
 
 class ChatDetailView: BaseListView {
@@ -43,8 +43,9 @@ class ChatDetailView: BaseListView {
     @IBOutlet weak var textFieldRightButton: UIButton!
     @IBOutlet weak var cameraButtonImage: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var microphoneButtonImage: UIImageView!
-    @IBOutlet weak var microphoneButton: UIButton!
+    @IBOutlet weak var recordOrSendButtonImage: UIImageView!
+    @IBOutlet weak var recordOrSendButton: UIButton!
+    @IBOutlet weak var textFieldTrailingSpace: NSLayoutConstraint!
     
     
     weak var dataSource: ChatDetailViewDataSource? {
@@ -61,6 +62,7 @@ class ChatDetailView: BaseListView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        chatTextField.delegate = self
         backButtonImage.image = UIImage(named: Config.shared.images.backArrow)
         profileImage.viewCornerRadius(22)
         profileTitleLabel.font = Config.shared.fontStyles.avenirHeavy1
@@ -72,9 +74,10 @@ class ChatDetailView: BaseListView {
         attachmentButtonImage.image = UIImage(named: Config.shared.images.attachment)
         textFieldRightButtonImage.image = UIImage(named: Config.shared.images.emoji)
         cameraButtonImage.image = UIImage(named: Config.shared.images.camera)
-        microphoneButtonImage.image = UIImage(named: Config.shared.images.microphone)
+        recordOrSendButtonImage.image = UIImage(named: Config.shared.images.microphone)
         textFieldContentView.viewCornerRadius(20)
         textFieldContentView.backgroundColor = Config.shared.colors.chatBackgroundColor4
+        
     }
     
     override func reloadData() {
@@ -89,6 +92,7 @@ class ChatDetailView: BaseListView {
     }
     
     @IBAction func moreTapped(_ sender: UIButton) {
+        
         delegate?.moreTapped()
     }
     
@@ -104,7 +108,28 @@ class ChatDetailView: BaseListView {
         delegate?.cameraTapped()
     }
     
-    @IBAction func microphoneTapped(_ sender: UIButton) {
-        delegate?.microphoneTapped()
+    @IBAction func recordOrSendTapped(_ sender: UIButton) {
+        delegate?.recordOrSendTapped()
+    }
+}
+
+extension ChatDetailView: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        cameraButtonImage.isHidden = true
+        cameraButton.isUserInteractionEnabled = false
+        textFieldRightButtonImage.isHidden = true
+        textFieldRightButton.isUserInteractionEnabled = false
+        textFieldTrailingSpace.constant = 15
+        recordOrSendButtonImage.image = UIImage(named: Config.shared.images.send)
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        cameraButtonImage.isHidden = false
+        cameraButton.isUserInteractionEnabled = true
+        textFieldRightButtonImage.isHidden = false
+        textFieldRightButton.isUserInteractionEnabled = true
+        textFieldTrailingSpace.constant = 60
+        recordOrSendButtonImage.image = UIImage(named: Config.shared.images.microphone)
     }
 }

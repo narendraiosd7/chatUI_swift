@@ -40,13 +40,13 @@ class ImageHorizontalLabelsCell: BaseTableViewCell {
         super.awakeFromNib()
         profileImage.viewCornerRadius(profileImage.frame.size.height/2)
         titleLabel.font = Config.shared.fontStyles.avenirRoman15
-        titleLabel.textColor = Config.shared.colors.textColor2
+        titleLabel.textColor = Config.shared.colors.chatTextColor2
         descriptionLabel.font = Config.shared.fontStyles.avenirRoman3
-        descriptionLabel.textColor = Config.shared.colors.textColor3
+        descriptionLabel.textColor = Config.shared.colors.chatTextColor3
         timeLabel.font = Config.shared.fontStyles.avenirMedium3
-        timeLabel.textColor = Config.shared.colors.textColor3
+        timeLabel.textColor = Config.shared.colors.chatTextColor3
         countLabel.font = Config.shared.fontStyles.avenirHeavy13
-        countLabel.textColor = Config.shared.colors.textColor1
+        countLabel.textColor = Config.shared.colors.chatTextColor1
         countLabel.backgroundColor = Config.shared.colors.chatBackgroundColor2
         countLabel.viewCornerRadius(countLabel.frame.size.height/2)
         statusView.backgroundColor = Config.shared.colors.chatBackgroundColor1

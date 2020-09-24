@@ -17,7 +17,6 @@ class ChatDetailViewModel: BaseViewModel {
     
     weak var delegate: ChatDetailViewModelDelegate?
     var messageData: [MessagesData] = []
-//    var messageType = MessageType.received
     func getData() {
         getMessagesData()
         delegate?.updateUI()
@@ -32,11 +31,16 @@ class ChatDetailViewModel: BaseViewModel {
     }
     
     func backTapped() {
-        
+        delegate?.popTheController()
     }
     
     func moreTapped() {
-        
+        DispatchQueue.main.async { [weak self] in
+            if let controller = Controller.actions.getViewController() as? ActionsViewController {
+                controller.modalPresentationStyle = .overCurrentContext
+                self?.delegate?.getPresentController()?.present(controller, animated: false, completion: nil)
+            }
+        }
     }
     
     func attachmentTapped() {
@@ -52,6 +56,18 @@ class ChatDetailViewModel: BaseViewModel {
     }
     
     func microphoneTapped() {
+        
+    }
+    
+    func backgroundTapped() {
+        delegate?.getPresentController()?.dismiss(animated: false, completion: nil)
+    }
+    
+    func muteTapped() {
+        
+    }
+    
+    func blockTapped() {
         
     }
 }
@@ -92,4 +108,8 @@ extension ChatDetailViewModel: ChatDetailViewDataSource {
     func dataSourceForCellAtIndex(_ indexPath: IndexPath, type: ViewType) -> BaseCardCellDataSource {
         return messageData[indexPath.row]
     }
+}
+
+extension ChatDetailViewModel: ActionsViewDataSource {
+    
 }

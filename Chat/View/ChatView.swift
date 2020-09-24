@@ -28,10 +28,11 @@ protocol ChatViewDelegate: BaseListViewDelegate {
     func postTapped()
     func chatTapped()
     func exploreTapped()
+    func selectedChatDetails(source: BaseTableViewCellDataSource?)
 }
 
 class ChatView: BaseListView {
-
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var navBarTitleLabel: UILabel!
@@ -111,7 +112,8 @@ class ChatView: BaseListView {
         helpButtonImage.image = UIImage(named: Config.shared.images.chat)
     }
     
-    func updateUI() {
+    override func reloadData() {
+        super.reloadData()
         homeButtonLabel.textColor = dataSource?.homeLabelColor
         newsButtonLabel.textColor = dataSource?.newsLabelColor
         postButtonLabel.textColor = dataSource?.postLabelColor
@@ -120,7 +122,14 @@ class ChatView: BaseListView {
         zNotificationCountLabel.text = dataSource?.zNotificationsCount
         chatNotificationCountLabel.text = dataSource?.chatNotificationCount
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        if let cell = tableView.cellForRow(at: indexPath) as? ImageHorizontalLabelsCell {
+            delegate?.selectedChatDetails(source: cell.dataSource)
+        }
+    }
+    
     @IBAction func searchTapped(_ sender: UIButton) {
         delegate?.searchTapped()
     }

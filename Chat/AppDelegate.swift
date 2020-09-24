@@ -8,13 +8,16 @@
 
 import UIKit
 import CocoaLumberjack
+import XMPPFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var xmppController: XMPPController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        self.xmppController = try! XMPPController(hostName: "http://chat-dev.india.com", userJID: "Niteesh@local-host", password: "Niteesh@123")
+        self.xmppController?.connet()
         DDLog.add(DDTTYLogger.sharedInstance!, with: DDLogLevel.all)
         return true
     }

@@ -9,5 +9,5 @@ target 'Chat' do
   pod 'Alamofire'
   pod 'SDWebImage'
   pod 'XMPPFramework', :git => "https://github.com/robbiehanson/XMPPFramework.git", :branch => 'master'
-
+  pod 'TPKeyboardAvoiding'
 end

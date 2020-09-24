@@ -35,7 +35,7 @@ extension ChatDetailsController: ChatDetailViewDelegate {
         viewModel.cameraTapped()
     }
     
-    func microphoneTapped() {
+    func recordOrSendTapped() {
         viewModel.microphoneTapped()
     }
     

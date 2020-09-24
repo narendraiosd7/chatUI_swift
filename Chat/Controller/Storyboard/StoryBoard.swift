@@ -19,6 +19,8 @@ enum Controller {
     case discover
     case chat
     case chatDetails
+    case actions
+    case search
     
     func getViewController() -> UIViewController{
         
@@ -53,6 +55,12 @@ enum Controller {
         case .chatDetails:
             storyBoardId = "Home"
             controllerId = "ChatDetailsController"
+        case .actions:
+            storyBoardId = "Home"
+            controllerId = "ActionsViewController"
+        case .search:
+            storyBoardId = "Home"
+            controllerId = "SearchViewController"
         }
         
         let storyboard = UIStoryboard(name: storyBoardId, bundle: nil)

@@ -60,6 +60,11 @@
 		DD3FA3E72514CA6600FF5FDF /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */; };
 		DD3FA3EB2514DD9600FF5FDF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3FA3EA2514DD9600FF5FDF /* Home.storyboard */; };
 		DD3FA3EE2515BB3400FF5FDF /* XMPPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */; };
+		DD4C2522251B36FA0075DB75 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C2521251B36FA0075DB75 /* ActionsView.swift */; };
+		DD4C2524251B37CC0075DB75 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C2523251B37CC0075DB75 /* ActionsViewController.swift */; };
+		DD4C2526251B3B690075DB75 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C2525251B3B690075DB75 /* SearchView.swift */; };
+		DD4C2528251B3B7B0075DB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C2527251B3B7B0075DB75 /* SearchViewController.swift */; };
+		DD4C252A251B7A020075DB75 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C2529251B7A020075DB75 /* SearchViewModel.swift */; };
 		DDA97C092518921A00073E33 /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C072518921A00073E33 /* SenderCell.swift */; };
 		DDA97C0A2518921A00073E33 /* SenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA97C082518921A00073E33 /* SenderCell.xib */; };
 		DDA97C0D2518923B00073E33 /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97C0B2518923B00073E33 /* ReceiverCell.swift */; };
@@ -127,6 +132,11 @@
 		DD3FA34D2514CA6600FF5FDF /* Avenir-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Light.ttf"; sourceTree = "<group>"; };
 		DD3FA3EA2514DD9600FF5FDF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DD3FA3ED2515BB3400FF5FDF /* XMPPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPController.swift; sourceTree = "<group>"; };
+		DD4C2521251B36FA0075DB75 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		DD4C2523251B37CC0075DB75 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
+		DD4C2525251B3B690075DB75 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DD4C2527251B3B7B0075DB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DD4C2529251B7A020075DB75 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DDA97C072518921A00073E33 /* SenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
 		DDA97C082518921A00073E33 /* SenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderCell.xib; sourceTree = "<group>"; };
 		DDA97C0B2518923B00073E33 /* ReceiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
@@ -213,9 +223,11 @@
 		DD3FA28E2514C9B400FF5FDF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DD3FA3072514CA6500FF5FDF /* ChatView.swift */,
 				DD3FA3022514CA6500FF5FDF /* View Components */,
+				DD3FA3072514CA6500FF5FDF /* ChatView.swift */,
 				DDA97C0F2518C49A00073E33 /* ChatDetailView.swift */,
+				DD4C2521251B36FA0075DB75 /* ActionsView.swift */,
+				DD4C2525251B3B690075DB75 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +243,8 @@
 				DD3FA27E2514C99B00FF5FDF /* ViewController.swift */,
 				DD3FA2BA2514CA6500FF5FDF /* ChatViewController.swift */,
 				DDA97C112518C5B600073E33 /* ChatDetailsController.swift */,
+				DD4C2523251B37CC0075DB75 /* ActionsViewController.swift */,
+				DD4C2527251B3B7B0075DB75 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +254,7 @@
 			children = (
 				DD3FA29D2514CA6500FF5FDF /* ChatViewModel.swift */,
 				DDA97C132518C60D00073E33 /* ChatDetailViewModel.swift */,
+				DD4C2529251B7A020075DB75 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -564,6 +579,7 @@
 				DD3FA3CB2514CA6600FF5FDF /* VerticalImageLabelCell.swift in Sources */,
 				DD3FA3B22514CA6600FF5FDF /* ErrorView.swift in Sources */,
 				DD3FA3D52514CA6600FF5FDF /* DocumentsAdapter.swift in Sources */,
+				DD4C2524251B37CC0075DB75 /* ActionsViewController.swift in Sources */,
 				DD3FA38C2514CA6600FF5FDF /* Formatters.swift in Sources */,
 				DDA97C102518C49A00073E33 /* ChatDetailView.swift in Sources */,
 				DD3FA3C02514CA6600FF5FDF /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
@@ -572,6 +588,7 @@
 				DD3FA3B42514CA6600FF5FDF /* ChatView.swift in Sources */,
 				DD3FA3832514CA6600FF5FDF /* TransitionViewController.swift in Sources */,
 				DD3FA27B2514C99B00FF5FDF /* AppDelegate.swift in Sources */,
+				DD4C2522251B36FA0075DB75 /* ActionsView.swift in Sources */,
 				DD3FA38A2514CA6600FF5FDF /* iOSDevCenters+GIF.swift in Sources */,
 				DD3FA36F2514CA6600FF5FDF /* ChatViewController.swift in Sources */,
 				DD3FA3C72514CA6600FF5FDF /* BaseCardCollectionViewCell.swift in Sources */,
@@ -582,6 +599,7 @@
 				DD3FA3D02514CA6600FF5FDF /* CardConfig.swift in Sources */,
 				DD3FA27D2514C99B00FF5FDF /* SceneDelegate.swift in Sources */,
 				DD3FA36A2514CA6600FF5FDF /* NotificationCenterAdapter.swift in Sources */,
+				DD4C2526251B3B690075DB75 /* SearchView.swift in Sources */,
 				DDA97C0D2518923B00073E33 /* ReceiverCell.swift in Sources */,
 				DD3FA3562514CA6600FF5FDF /* ChatViewModel.swift in Sources */,
 				DD3FA39F2514CA6600FF5FDF /* Config.swift in Sources */,
@@ -596,8 +614,10 @@
 				DDA97C162518C62C00073E33 /* Messages.swift in Sources */,
 				DD3FA3D12514CA6600FF5FDF /* VideoTracking.swift in Sources */,
 				DD3FA3A42514CA6600FF5FDF /* AppConfig.swift in Sources */,
+				DD4C2528251B3B7B0075DB75 /* SearchViewController.swift in Sources */,
 				DDA97C142518C60D00073E33 /* ChatDetailViewModel.swift in Sources */,
 				DDA97C092518921A00073E33 /* SenderCell.swift in Sources */,
+				DD4C252A251B7A020075DB75 /* SearchViewModel.swift in Sources */,
 				DD3FA36E2514CA6600FF5FDF /* NoInternetViewController.swift in Sources */,
 				DD3FA39A2514CA6600FF5FDF /* ChatProfile.swift in Sources */,
 				DD3FA3892514CA6600FF5FDF /* UPCarouselFlowLayout.swift in Sources */,
