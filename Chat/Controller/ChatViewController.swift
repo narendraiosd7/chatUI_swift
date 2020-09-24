@@ -28,6 +28,14 @@ class ChatViewController: BaseViewController {
 }
 
 extension ChatViewController: ChatViewDelegate {
+    func helpChat() {
+        viewModel.helpTapped()
+    }
+    
+    func chatNotificationTapped() {
+        viewModel.chatNotificationTapped()
+    }
+    
     func selectedChatDetails(source: BaseTableViewCellDataSource?) {
         viewModel.selectedChatDetails(source: source)
     }

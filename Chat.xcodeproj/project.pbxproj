@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AA168C5E83F134BD32E8603D /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE0DDD69E1E3236F3889CD /* Pods_Chat.framework */; };
+		DD202529251C98470027B3D5 /* NewChatRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD202528251C98470027B3D5 /* NewChatRequestView.swift */; };
+		DD20252B251C9A450027B3D5 /* NewChatRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20252A251C9A450027B3D5 /* NewChatRequestController.swift */; };
+		DD20252D251CA1BD0027B3D5 /* NewChatRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD20252C251CA1BD0027B3D5 /* NewChatRequestModel.swift */; };
 		DD3FA27B2514C99B00FF5FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA27A2514C99B00FF5FDF /* AppDelegate.swift */; };
 		DD3FA27D2514C99B00FF5FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA27C2514C99B00FF5FDF /* SceneDelegate.swift */; };
 		DD3FA27F2514C99B00FF5FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FA27E2514C99B00FF5FDF /* ViewController.swift */; };
@@ -78,6 +81,9 @@
 /* Begin PBXFileReference section */
 		48E6485CBBA7C364A6CD4444 /* Pods-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		4E26315AF085D7D1E7599464 /* Pods-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.release.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.release.xcconfig"; sourceTree = "<group>"; };
+		DD202528251C98470027B3D5 /* NewChatRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatRequestView.swift; sourceTree = "<group>"; };
+		DD20252A251C9A450027B3D5 /* NewChatRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatRequestController.swift; sourceTree = "<group>"; };
+		DD20252C251CA1BD0027B3D5 /* NewChatRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatRequestModel.swift; sourceTree = "<group>"; };
 		DD3FA2772514C99B00FF5FDF /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3FA27A2514C99B00FF5FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD3FA27C2514C99B00FF5FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				DDA97C0F2518C49A00073E33 /* ChatDetailView.swift */,
 				DD4C2521251B36FA0075DB75 /* ActionsView.swift */,
 				DD4C2525251B3B690075DB75 /* SearchView.swift */,
+				DD202528251C98470027B3D5 /* NewChatRequestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 				DDA97C112518C5B600073E33 /* ChatDetailsController.swift */,
 				DD4C2523251B37CC0075DB75 /* ActionsViewController.swift */,
 				DD4C2527251B3B7B0075DB75 /* SearchViewController.swift */,
+				DD20252A251C9A450027B3D5 /* NewChatRequestController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 				DD3FA29D2514CA6500FF5FDF /* ChatViewModel.swift */,
 				DDA97C132518C60D00073E33 /* ChatDetailViewModel.swift */,
 				DD4C2529251B7A020075DB75 /* SearchViewModel.swift */,
+				DD20252C251CA1BD0027B3D5 /* NewChatRequestModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -575,9 +584,11 @@
 				DD3FA3B72514CA6600FF5FDF /* BaseTableViewCell.swift in Sources */,
 				DD3FA37D2514CA6600FF5FDF /* AlertViewController.swift in Sources */,
 				DD3FA3512514CA6600FF5FDF /* BaseViewModel.swift in Sources */,
+				DD202529251C98470027B3D5 /* NewChatRequestView.swift in Sources */,
 				DD3FA3502514CA6600FF5FDF /* BaseViewController.swift in Sources */,
 				DD3FA3CB2514CA6600FF5FDF /* VerticalImageLabelCell.swift in Sources */,
 				DD3FA3B22514CA6600FF5FDF /* ErrorView.swift in Sources */,
+				DD20252B251C9A450027B3D5 /* NewChatRequestController.swift in Sources */,
 				DD3FA3D52514CA6600FF5FDF /* DocumentsAdapter.swift in Sources */,
 				DD4C2524251B37CC0075DB75 /* ActionsViewController.swift in Sources */,
 				DD3FA38C2514CA6600FF5FDF /* Formatters.swift in Sources */,
@@ -586,6 +597,7 @@
 				DD3FA3D22514CA6600FF5FDF /* EventBaseViewController.swift in Sources */,
 				DDA97C122518C5B600073E33 /* ChatDetailsController.swift in Sources */,
 				DD3FA3B42514CA6600FF5FDF /* ChatView.swift in Sources */,
+				DD20252D251CA1BD0027B3D5 /* NewChatRequestModel.swift in Sources */,
 				DD3FA3832514CA6600FF5FDF /* TransitionViewController.swift in Sources */,
 				DD3FA27B2514C99B00FF5FDF /* AppDelegate.swift in Sources */,
 				DD4C2522251B36FA0075DB75 /* ActionsView.swift in Sources */,

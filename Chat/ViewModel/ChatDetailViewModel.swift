@@ -70,9 +70,17 @@ class ChatDetailViewModel: BaseViewModel {
     func blockTapped() {
         
     }
+    
+    func acceptTapped() {
+        
+    }
 }
 
 extension ChatDetailViewModel: ChatDetailViewDataSource {
+    var isNewChat: Bool {
+        return true
+    }
+    
     var profileImage: String {
         return "image1"
     }

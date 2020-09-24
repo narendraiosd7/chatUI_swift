@@ -81,6 +81,14 @@ class ChatViewModel: BaseViewModel {
     func selectedChatDetails(source: BaseTableViewCellDataSource?) {
         delegate?.push(Controller.chatDetails.getViewController())
     }
+    
+    func helpTapped() {
+        
+    }
+    
+    func chatNotificationTapped() {
+        delegate?.push(Controller.newChatRequest.getViewController())
+    }
 }
 
 extension ChatViewModel: ChatViewDataSource {
@@ -150,5 +158,11 @@ extension ChatViewModel: ChatViewDataSource {
         } else {
             return chatData[indexPath.row]
         }
+    }
+}
+
+extension ChatViewModel: NewChatRequestViewDataSource {
+    var zNotificationCount: String {
+        return "100"
     }
 }

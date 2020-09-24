@@ -12,6 +12,7 @@ protocol ChatDetailViewDataSource: BaseListViewDataSource {
     var profileImage: String {get}
     var profileTitle: String {get}
     var status: String {get}
+    var isNewChat: Bool {get}
 }
 
 protocol ChatDetailViewDelegate: BaseListViewDelegate {
@@ -21,10 +22,12 @@ protocol ChatDetailViewDelegate: BaseListViewDelegate {
     func emojiTapped()
     func cameraTapped()
     func recordOrSendTapped()
+    func acceptTapped()
+    func blockTapped()
 }
 
 class ChatDetailView: BaseListView {
-
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var backButtonImage: UIImageView!
@@ -46,6 +49,10 @@ class ChatDetailView: BaseListView {
     @IBOutlet weak var recordOrSendButtonImage: UIImageView!
     @IBOutlet weak var recordOrSendButton: UIButton!
     @IBOutlet weak var textFieldTrailingSpace: NSLayoutConstraint!
+    @IBOutlet weak var existedChatActionsContentView: UIView!
+    @IBOutlet weak var newChatActionContentView: UIView!
+    @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var blockButton: UIButton!
     
     
     weak var dataSource: ChatDetailViewDataSource? {
@@ -77,7 +84,16 @@ class ChatDetailView: BaseListView {
         recordOrSendButtonImage.image = UIImage(named: Config.shared.images.microphone)
         textFieldContentView.viewCornerRadius(20)
         textFieldContentView.backgroundColor = Config.shared.colors.chatBackgroundColor4
-        
+        acceptButton.viewCornerRadius(22)
+        acceptButton.backgroundColor = Config.shared.colors.chatTextColor6
+        acceptButton.titleLabel?.font = Config.shared.fontStyles.avenirHeavy3
+        acceptButton.setTitleColor(Config.shared.colors.chatTextColor1, for: .normal)
+        acceptButton.setTitle(Config.shared.strings.accept, for: .normal)
+        blockButton.viewCornerRadius(22)
+        blockButton.titleLabel?.font = Config.shared.fontStyles.avenirHeavy3
+        blockButton.setTitleColor(Config.shared.colors.chatTextColor3, for: .normal)
+        blockButton.setTitle(Config.shared.strings.block, for: .normal)
+        blockButton.putBorder(borderColor: Config.shared.colors.chatTextColor3, borderWidth: 2)
     }
     
     override func reloadData() {
@@ -85,6 +101,13 @@ class ChatDetailView: BaseListView {
         profileImage.image = UIImage(named: dataSource?.profileImage ?? "")
         profileTitleLabel.text = dataSource?.profileTitle
         statusLabel.text = dataSource?.status
+        if dataSource?.isNewChat ?? true {
+            newChatActionContentView.isHidden = false
+            existedChatActionsContentView.isHidden = true
+        } else {
+            newChatActionContentView.isHidden = true
+            existedChatActionsContentView.isHidden = false
+        }
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
@@ -110,6 +133,14 @@ class ChatDetailView: BaseListView {
     
     @IBAction func recordOrSendTapped(_ sender: UIButton) {
         delegate?.recordOrSendTapped()
+    }
+    
+    @IBAction func acceptTapped(_ sender: UIButton) {
+        delegate?.acceptTapped()
+    }
+    
+    @IBAction func blockTapped(_ sender: UIButton) {
+        delegate?.blockTapped()
     }
 }
 

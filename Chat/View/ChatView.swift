@@ -29,6 +29,8 @@ protocol ChatViewDelegate: BaseListViewDelegate {
     func chatTapped()
     func exploreTapped()
     func selectedChatDetails(source: BaseTableViewCellDataSource?)
+    func helpChat()
+    func chatNotificationTapped()
 }
 
 class ChatView: BaseListView {
@@ -44,7 +46,7 @@ class ChatView: BaseListView {
     @IBOutlet weak var bottomBorderView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var chatNotificationImage: UIImageView!
-    @IBOutlet weak var chatNotificationView: UIView!
+    @IBOutlet weak var chatNotificationsButton: UIButton!
     @IBOutlet weak var chatNotificationCountLabel: UILabel!
     @IBOutlet weak var newChatRequestLabel: UILabel!
     @IBOutlet weak var bottomBorderView1: UIView!
@@ -86,8 +88,8 @@ class ChatView: BaseListView {
         moreButtonImage.image = UIImage(named: Config.shared.images.more)
         nameLabel.font = Config.shared.fontStyles.avenirRoman15
         chatButtonImage.image = UIImage(named: Config.shared.images.chat1)
-        chatNotificationView.viewCornerRadius(9)
-        chatNotificationView.backgroundColor = Config.shared.colors.chatBackgroundColor
+        chatNotificationCountLabel.viewCornerRadius(9)
+        chatNotificationCountLabel.backgroundColor = Config.shared.colors.chatBackgroundColor
         chatNotificationCountLabel.font =  Config.shared.fontStyles.avenirHeavy13
         chatNotificationCountLabel.textColor = Config.shared.colors.chatTextColor1
         newChatRequestLabel.font = Config.shared.fontStyles.avenirBlack15
@@ -163,6 +165,10 @@ class ChatView: BaseListView {
     }
     
     @IBAction func helpTapped(_ sender: UIButton) {
-        
+        delegate?.chatTapped()
+    }
+    
+    @IBAction func chatNotificationTapped(_ sender: UIButton) {
+        delegate?.chatNotificationTapped()
     }
 }

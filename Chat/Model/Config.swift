@@ -88,6 +88,9 @@ class StaticData {
     var mute = "Mute"
     var block = "Block"
     var cancel = "CANCEL"
+    var newChatRequest = "New Chat Request"
+    var newChatDescription = "Open a request to get info about who's messaging you. They won't know you've seen it until you accept."
+    var accept = "Accept"
     
     init() {
         if let data = DocumentsAdapter.getData(path: DocumentPath.translation.rawValue){

@@ -53,17 +53,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiG-XE-1YZ">
-                                <rect key="frame" x="297" y="59.5" width="18" height="18"/>
+                                <rect key="frame" x="273" y="59.5" width="42" height="18"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="QKX-qd-cTa"/>
                                     <constraint firstAttribute="height" constant="18" id="qxl-7g-slF"/>
-                                    <constraint firstAttribute="width" secondItem="EiG-XE-1YZ" secondAttribute="height" multiplier="1:1" id="uuX-h0-aJg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBp-pn-yrW">
-                                <rect key="frame" x="297" y="59.5" width="18" height="18"/>
+                                <rect key="frame" x="285" y="59.5" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="h1g-5p-rEY"/>
                                     <constraint firstAttribute="width" secondItem="jBp-pn-yrW" secondAttribute="height" multiplier="1:1" id="t4p-8O-pBA"/>

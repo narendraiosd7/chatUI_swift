@@ -23,6 +23,14 @@ class ChatDetailsController: BaseViewController {
 }
 
 extension ChatDetailsController: ChatDetailViewDelegate {
+    func acceptTapped() {
+        viewModel.acceptTapped()
+    }
+    
+    func blockTapped() {
+        viewModel.blockTapped()
+    }
+    
     func attachmentTapped() {
         viewModel.attachmentTapped()
     }
